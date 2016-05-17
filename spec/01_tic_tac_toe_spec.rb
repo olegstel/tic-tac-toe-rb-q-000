@@ -104,7 +104,7 @@ describe './lib/tic_tac_toe.rb' do
       allow($stdout).to receive(:puts)
 
       expect(self).to receive(:gets).and_return("1")
-
+      puts(board)
       turn(board)
 
       expect(board).to match_array(["X", " ", " ", " ", " ", " ", " ", " ", " "])

@@ -1,3 +1,18 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/tic_tac_toe'
+puts "Please  enter 1-9:"
+       position = gets.strip
+ board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+puts "Welcome to Tic Tac Toe!"
+display_board(board)
+puts "Where would you like to go?"
+position =""
+while !(position.to_i >0 && position <10)
+puts "Please  enter 1-9:"
+       position = gets.strip
+end
+position=position.to_i
+
+move(board, position)
+display_board(board)
